@@ -59,7 +59,7 @@ if experiment == "📈 时域分析（阶跃/脉冲/斜坡）":
     else:
         # 斜坡响应：使用 lsim
         u = t  # 斜坡输入
-        t, y, _ = ct.forced_response(sys, T=t, U=u)
+        t, y = ct.forced_response(sys, T=t, U=u)
         title_str = "斜坡响应"
 
     # 绘图
